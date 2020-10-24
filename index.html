@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vaporwave Generator</title>
+  <title>Vaporwavify</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tunajs/1.0.1/tuna-min.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   <script src="js/jqueryKnob.js"></script>
@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-  <h1>Down-pitches, bass boosts, and adds reverb to make vaporwave.</h1>
+  <h1 id="title">ＡＥＳＴＨＥＴＩＣ</h1>
   <input type="file" accept="audio/*">
   <button onclick="playSound()" disabled>Start</button>
   <button onclick="stopSound()" disabled>Stop</button>
@@ -18,7 +18,7 @@
     <a class="btn-push" onclick="generate();" href="javascript:return false;">Vaporwavify!</a>
   </p>
   <div class="wrapper" style="width:100%">
-    <canvas class="visualizer" width="640" height="100" style="margin: 5px 0px 15px 0px; border: 2px solid gray; background-color:#C8C8C8"></canvas> 
+    <canvas class="visualizer" height=100></canvas> 
     <div class="rTable rTable-4col">
       <div style="order:1;" class="rTable-cell"><h3>Gain</h3></div>
       <div style="order:2;" class="rTable-cell">
