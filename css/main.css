@@ -5,8 +5,29 @@ body{
   padding: 0em 2em;
   box-sizing: border-box;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+	background: url(https://storage.needpix.com/rsynced_images/sunset-2629542_1280.jpg) no-repeat fixed center;
+	background-size: cover;
 }
 p{font-size: 30px; line-height: 30px}
+
+#title {
+	font-size: 80px;
+	font-style: italic;
+}
+h3 {
+	font-size: 30px;
+	color: deepskyblue;
+}
+
+.visualizer {
+	width: 60vw;
+	height: 100px;
+	margin: 5px 0px 15px 0px;
+	border: 0.5px solid black;
+	background-image: url("https://cdn.pixabay.com/photo/2017/06/21/09/24/retro-2426631_1280.png");
+	background-position: center 295px;
+}
 
 /* Responsive Table Layout */
 .rTable {
