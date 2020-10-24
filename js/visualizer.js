@@ -1,18 +1,18 @@
-// Visualizer from MDN Voice-o-matic
 var canvas = document.querySelector('.visualizer');
 var canvasCtx = canvas.getContext("2d");
-
-var intendedWidth = document.querySelector('.wrapper').clientWidth;
-
-canvas.setAttribute('width',intendedWidth);
 
 var drawVisual;
 
 var visualSetting = "sinewave";
 
+var background = new Image();
+background.src = "https://cdn.pixabay.com/photo/2017/06/21/09/24/retro-2426631_1280.png";
+
 function visualize(analyser) {
-  WIDTH = canvas.width;
-  HEIGHT = canvas.height;
+	const { width, height } = canvas.getBoundingClientRect();
+	
+  WIDTH = width;
+  HEIGHT = height;
 
   if(visualSetting === "sinewave") {
     analyser.fftSize = 2048;
@@ -27,12 +27,11 @@ function visualize(analyser) {
       drawVisual = requestAnimationFrame(draw);
 
       analyser.getByteTimeDomainData(dataArray);
-
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+			
+			canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
       canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+      canvasCtx.strokeStyle = '#00f9ff';
 
       canvasCtx.beginPath();
 
@@ -96,5 +95,4 @@ function visualize(analyser) {
     canvasCtx.fillStyle = "red";
     canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
   }
-
 }
