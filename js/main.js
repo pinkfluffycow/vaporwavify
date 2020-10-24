@@ -58,7 +58,7 @@ function playSound() {
     dryLevel: 1,
     wetLevel: 1,
     level: reverbValue,
-    impulse: "/media/Tin IR.wav",
+    impulse: "../media/Tin IR.wav",
     bypass: 0
   });
 
