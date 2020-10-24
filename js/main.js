@@ -58,7 +58,7 @@ function playSound() {
     dryLevel: 1,
     wetLevel: 1,
     level: reverbValue,
-    impulse: "/audio/Tin IR.wav",
+    impulse: "/media/Tin IR.wav",
     bypass: 0
   });
 
@@ -85,13 +85,13 @@ function generate(){
   detuneValue = parseFloat(-100 * Math.floor((Math.random() * 8 + 5))).toFixed(0);
   bassValue = parseFloat(Math.floor((Math.random()*51 +50))/10).toFixed(1);
   reverbValue = parseFloat(Math.floor((Math.random() * 5 + 1))).toFixed(0);
-  if(reverbValue <= 2){
+  if (reverbValue <= 2) {
     gainValue = 0.5 - (0.1 * parseFloat(Math.floor((4.3/5)).toFixed(0)));
-  }else if (reverbValue <= 3){
+  } else if (reverbValue <= 3) {
     gainValue = 0.3 - (0.1 * parseFloat(Math.floor((4.3/5)).toFixed(0)));
-  }else if (reverbValue <= 4){
+  } else if (reverbValue <= 4) {
     gainValue = 0.2 - (0.1 * parseFloat(Math.floor((4.3/5)).toFixed(0)));
-  }else if (reverbValue <= 5){
+  } else if (reverbValue <= 5) {
     gainValue = 0.1;
   }
 
